@@ -9,6 +9,183 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        /* 1 задание */
+        var a = 1, b = 1, c, d;
+        alert("1) У нас есть переменные a = 1, b = 1, c, d");
+        document.write("1) У нас есть переменные a = 1, b = 1, c, d <br>");
+        c = ++a;
+        alert("c = ++a будет равно " + c + ", т.к. сначала а увеличивается на единицу, затем происходит возврат значения");
+        document.write("c = ++a будет равно " + c + ", т.к. сначала а увеличивается на единицу, затем происходит возврат значения <br>");
+        d = b++;
+        alert("d = b++ будет равно " + d + ", т.к. сначала происходит возврат значения, и лишь затем b увеличивается на единицу");
+        document.write("d = b++ будет равно " + d + ", т.к. сначала происходит возврат значения, и лишь затем b увеличивается на единицу <br>");
+        c = (2 + ++a);
+        alert("c = (2 + ++a) равно " + c + ", т.к. а после предыдущей операции имеет значение 2, мы его увеличили на единицу и лишь затем провели сложение");
+        document.write("c = (2 + ++a) равно " + c + ", т.к. а после предыдущей операции имеет значение 2, мы его увеличили на единицу и лишь затем провели сложение <br>");
+        d = (2 + b++);
+        alert("d = (2 + b++) равно " + d + ", т.к. мы сначала выполнили сложение 2 и предыдущего значения b (2), и лишь затем увеличили b на единицу");
+        document.write("d = (2 + b++) равно " + d + ", т.к. мы сначала выполнили сложение 2 и предыдущего значения b (2), и лишь затем увеличили b на единицу <br>");
+        alert("Итоговое значение а после всех предыдущих операций - " + a);
+        document.write("Итоговое значение а после всех предыдущих операций - " + a + "<br>");
+        alert("Итоговое значение b после всех предыдущих операций - " + b);
+        document.write("Итоговое значение а после всех предыдущих операций - " + b + "<br> <br>");
+
+
+        /* 2 задание */
+        alert("2) Дан код var a = 2; var x = 1 + (a *= 2);");
+        document.write("2) Дан код var a = 2; var x = 1 + (a *= 2);<br>");
+        var a = 2;
+        var x = 1 + (a *= 2);
+        alert("X равен " + x + ", т.к. а сначала умножилось на два, записало значение в себя и затем было произведено сложение");
+        document.write("X равен " + x + ", т.к. а сначала умножилось на два, записало значение в себя и затем было произведено сложение<br>"); * /
+
+        /* 3 задание */
+
+        var a = +prompt("3) Введите значение а");
+        var b = +prompt("Введите значение b");
+        var result;
+        document.write("3) Вы задали значения а = " + a + ", b = " + b + "<br>");
+
+        if (a >= 0 && b >= 0) {
+            result = a - b;
+            alert("a и b - положительные, их разница равна " + result);
+            document.write("a и b - положительные, их разница равна " + result + "<br>");
+        }
+        else if (a < 0 && b < 0) {
+            result = a * b;
+            alert("a и b - отрицательные, их произведение равно " + result);
+            document.write("a и b - отрицательные, их произведение равно " + result + "<br>");
+        }
+        else {
+            result = a + b;
+            alert("a и b имеют разные знаки, их сумма " + result);
+            document.write("a и b имеют разные знаки, их сумма " + result + "<br>");
+        }
+
+        /* задание 4 */
+        var a = +prompt("4) Введите значение от 1 до 15");
+        document.write("4) Вы присвоили a значение " + a + "<br>");
+
+        switch (a) {
+            case 1:
+                alert("Ряд от " + a + " до 15: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 2:
+                alert("Ряд от " + a + " до 15: 2 3 4 5 6 7 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 2 3 4 5 6 7 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 3:
+                alert("Ряд от " + a + " до 15: 3 4 5 6 7 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 3 4 5 6 7 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 4:
+                alert("Ряд от " + a + " до 15: 4 5 6 7 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 4 5 6 7 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 5:
+                alert("Ряд от " + a + " до 15: 5 6 7 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 5 6 7 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 6:
+                alert("Ряд от " + a + " до 15: 6 7 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 6 7 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 7:
+                alert("Ряд от " + a + " до 15: 7 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 7 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 8:
+                alert("Ряд от " + a + " до 15: 8 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 8 9 10 11 12 13 14 15<br>");
+                break;
+            case 9:
+                alert("Ряд от " + a + " до 15: 9 10 11 12 13 14 15");
+                document.write("Ряд от " + a + " до 15: 9 10 11 12 13 14 15<br>");
+                break;
+            case 10:
+                alert("Ряд от " + аa + " до 15: 10 11 12 13 14 15");
+                document.write("Ряд от " + аa + " до 15: 10 11 12 13 14 15<br>");
+                break;
+            case 11:
+                alert("Ряд от " + аa + " до 15: 11 12 13 14 15");
+                document.write("Ряд от " + аa + " до 15: 11 12 13 14 15<br>");
+                break;
+            case 12:
+                alert("Ряд от " + аa + " до 15: 12 13 14 15");
+                document.write("Ряд от " + аa + " до 15: 12 13 14 15<br>");
+                break;
+            case 13:
+                alert("Ряд от " + аa + " до 15: 13 14 15");
+                document.write("Ряд от " + аa + " до 15: 13 14 15<br>");
+                break;
+            case 14:
+                alert("Ряд от " + аa + " до 15: 14 15");
+                document.write("Ряд от " + аa + " до 15: 14 15<br>");
+                break;
+            case 15:
+                alert("Ряд от " + аa + " до 15: 15");
+                document.write("Ряд от " + аa + " до 15: 15<br>");
+                break;
+        }
+
+        /* задание 5 */
+
+        function sum(arg1, arg2) {
+            var sumResult;
+            sumResult = arg1 + arg2;
+            return sumResult;
+        }
+
+        function difference(arg1, arg2) {
+            var diffResult;
+            diffResult = arg1 - arg2;
+            return diffResult;
+        }
+
+        function multiplication(arg1, arg2) {
+            var multResult;
+            multResult = arg1 * arg2;
+            return multResult;
+        }
+
+        function division(arg1, arg2) {
+            var divResult;
+            divResult = arg1 / arg2;
+            return divfResult;
+        }
+
+        /* Задание 6 */
+
+        function mathOperation(arg1, arg2, operation) {
+            var result = 0;
+            switch (operation) {
+                case sum:
+                    result = sum(arg1, arg2);
+                    return result;
+                    break;
+                case difference:
+                    result = difference(arg1, arg2);
+                    return result;
+                case multiplication:
+                    result = multiplication(arg1, arg2);
+                    return result;
+                case division:
+                    result = division(arg1, arg2);
+                    return result;
+            }
+        }
+
+        var arg1 = +prompt("ВВедите первый аргумент");
+        var arg2 = +prompt("Введите второй аргумент");
+        var operation = prompt("Что нужно сделать? введите операцию sum / difference / multiplication / division");
+
+        var calculate = mathOperation(arg1, arg2, operation);
+        alert("Результат операции " + operation + " с аргументами " + arg1 + " и " + arg2 + " равен " + calculate);
+
+
+    </script>
 
 </body>
 
